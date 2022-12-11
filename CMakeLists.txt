@@ -1,10 +1,9 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.16)
+project( fht )
 
-project( FHT )
-
-set(CMAKE_CXX_FLAGS "-O3 -Wall")
+set(CMAKE_CXX_STANDARD 20)
 
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
-add_executable( FHT main.cpp fast_hough_transform.cpp)
-target_link_libraries( FHT ${OpenCV_LIBS} )
+add_executable( fht main.cpp fast_hough_transform.cpp)
+target_link_libraries( fht ${OpenCV_LIBS} )
